@@ -1,0 +1,9 @@
+<div class="text-center">
+  <h2 id=grey><%= @set %></h2>
+  <form action="/score" method="get">
+    <input type="text" name="query" placeholder="Enter your best guess">
+    <input type="hidden" name="grid" value="<%= @set.join("") %>">
+    <input type="hidden" name="start" value="<%= Time.now %>">
+    <input type="submit">
+  </form>
+</div>
